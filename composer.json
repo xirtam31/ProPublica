@@ -1,6 +1,7 @@
 {
     "name": "nichols/pro-publica",
     "require": {
-        "php-curl-class/php-curl-class": "^7.3"
+        "php-curl-class/php-curl-class": "^7.3",
+        "twig/twig": "^2.0"
     }
 }
