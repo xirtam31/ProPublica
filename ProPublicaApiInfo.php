@@ -1,16 +1,20 @@
 <?php 
 
+use \Curl\Curl;
+
 class ProPublicaApiInfo
 {
     private $org_multi = array();
     
     public function __construct($ein)
     {
+        $curl = new Curl();
+        
         $url = "https://projects.propublica.org/nonprofits/api/v2/organizations/".$ein.".json";
         
-        $result = file_get_contents($url);
-    
-        $data = json_decode($result, true);
+        $result = $curl->get($url);
+        $data = json_encode($result);
+        $data = json_decode($data, true);
         
         $this->org_multi = $data;
     }
@@ -260,4 +264,4 @@ class ProPublicaApiInfo
     }
 }
 
-?>#ProPublicaApiInfo
+?>
