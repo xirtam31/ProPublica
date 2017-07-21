@@ -1,0 +1,6 @@
+{
+    "name": "nichols/pro-publica",
+    "require": {
+        "php-curl-class/php-curl-class": "^7.3"
+    }
+}
